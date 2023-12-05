@@ -1,0 +1,131 @@
+.search {
+  display: flex;
+  align-items: center;
+  /* border: 10px solid red; */
+  border-radius: 6px;
+  background-color: rgb(250, 250, 250);
+  padding: 35px;
+  height: 4rem;
+}
+
+.searchIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: rgb(62, 62, 62);
+}
+
+.search {
+  width: 40%;
+}
+
+.search input {
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: null;
+}
+
+.search input:focus {
+  outline: none !important ;
+}
+
+.search ul {
+  position: absolute;
+  z-index: 1;
+  right: 50%;
+  transform: translate(50%, 0%);
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 30%;
+  background-color: #fff;
+}
+
+.search ul {
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 50%;
+  background-color: #fff;
+}
+
+.search ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.search ul li:last-child {
+  border-bottom: none;
+}
+
+.search ul li:hover {
+  background-color: #f0f0f0;
+}
+
+.search ul li p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.search ul li img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .search {
+    padding: 0px;
+    z-index: 0;
+    margin: auto;
+    width: 80%;
+    max-width: 80vw;
+    position: absolute;
+    top: 100%;
+    height: 4rem;
+    max-height: 5rem;
+  }
+
+  .show {
+    display: none;
+  }
+
+  .search ul {
+    width: 80%;
+    margin: auto;
+  }
+  /* .searchBar {
+    position: absolute;
+    max-width: 100%;
+    top: 100%;
+    right: 0%;
+    transform: translate(0%, -50%);
+    /* right: 0; */
+
+  .search {
+    position: absolute;
+    padding: 1rem;
+    border: 2px solid #ddd;
+    top: 100%;
+    right: 5%;
+    border-radius: 1rem;
+    z-index: 11;
+    left: 5%;
+    transform: translateX(-5%);
+  }
+
+  .search input {
+    width: 100%;
+  }
+}

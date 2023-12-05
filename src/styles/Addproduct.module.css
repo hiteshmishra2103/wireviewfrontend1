@@ -1,0 +1,899 @@
+.addProductContainer {
+  background-color: #f1f1f1;
+  padding: 2.5rem 5rem 5rem 5rem;
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  /* text-align: center; */
+}
+.addProductContainer h2 {
+  /* margin-left: 5rem; */
+  text-align: center;
+}
+
+.DeleteBtn {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  background-color: red;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.addProductFormParentContainer {
+  display: flex;
+  margin-top: 2.5rem;
+  /* justify-content: center; */
+  justify-content: space-between;
+}
+
+.addProductFormContainer {
+  width: 80%;
+}
+
+/* Product thumbnail card */
+
+.productThumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.imagePreviewContainer img {
+}
+
+.productThumbnailCard {
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  max-width: 500px;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 40px;
+  padding-inline: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.thumbnailPreviewCard {
+  position: relative;
+}
+
+.imagePreviewCard {
+  position: relative;
+}
+.imagePreviewCard .DeleteThumbnailBtn {
+  position: static;
+  margin-bottom: 1rem;
+}
+
+.previewThumbnail {
+  width: 100%;
+  height: 100%;
+}
+
+.productMediaCard {
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.productTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.productDescription {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.uploadForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.uploadLabel {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.uploadInput {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.uploadButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(37, 99, 235);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.DeleteThumbnailBtn {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  background-color: red;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.DeleteFilesBtn {
+  background-color: red;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.imagePreviewCard {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* gap: 10px; */
+}
+/* .previewImage {
+} */
+
+.previewImage {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.fileUpload {
+  width: 300px;
+  height: 200px;
+  border: 2px dashed #007bff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.fileUpload p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.fileInput {
+  position: absolute;
+  z-index: 1000;
+  opacity: 0;
+  cursor: pointer;
+  right: 0;
+  top: 0;
+  height: 100%;
+  font-size: 24px;
+  width: 100%;
+}
+
+.imagePreviewContainer {
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
+
+.imagePreview {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.clearImage {
+  position: absolute;
+  z-index: 20;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.uploadForm {
+  margin: 1rem;
+}
+
+.fileUploadContainer {
+  margin: 1rem 0;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+}
+
+/* thumbnail card css s*/
+
+.iconContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.imagePreviewCard {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.imagePreview {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  position: relative;
+}
+
+.imagePreview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imagePreview button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.imagePreview button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Create product form styles */
+
+.addProductFormContainer {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+.textField {
+  position: relative;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  margin: 1rem 0;
+}
+.textField input {
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 40px;
+  font-size: 1rem;
+  transition: all 0.5s ease;
+}
+
+.textField label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #7e7e7e;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.textField span::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: black;
+  transition: all 0.5s ease;
+}
+
+.textField input:focus ~ span::before,
+.textField input:valid ~ span::before {
+  width: 100%;
+  border-bottom: 1px solid rgb(30, 64, 175);
+}
+
+.textField input:focus ~ label,
+.textField input:valid ~ label {
+  top: -5px;
+  left: 0;
+  /* font-weight: 500; */
+  color: black;
+  font-size: 1rem;
+}
+
+.dropdown select {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  border-radius: 4px;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.5s ease;
+  background-color: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.textField select:focus {
+  border-color: #3064ff;
+}
+
+/* description input styling */
+.textarea {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.textarea textarea {
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.textarea textarea::placeholder {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #7e7e7e;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Buttons */
+
+.saveButtonContainer {
+  display: flex;
+  justify-content: center;
+
+  /* justify-content: space-around; */
+}
+.createButton {
+  font-size: 1.4rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  margin-inline: auto;
+  text-align: center;
+  margin-inline: 0.5rem;
+  height: 3rem;
+  outline: none;
+  border-radius: 0.8rem;
+  font-weight: 520;
+  cursor: pointer;
+  border: none;
+  background-color: rgba(30, 64, 175);
+  color: white;
+  transition: all 0.5s ease;
+  width: 30vw;
+  background-color: rgb(37, 99, 235);
+}
+
+.createButton:hover {
+  color: rgb(37, 99, 235);
+  background-color: white;
+  border: 1px solid rgb(37, 99, 235);
+}
+.saveButton {
+  border: 1px solid rgb(37, 99, 235);
+  font-size: 1.4rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  margin-inline: auto;
+  text-align: center;
+  margin-inline: 0.5rem;
+  height: 3rem;
+  outline: none;
+  border-radius: 0.8rem;
+  font-weight: 520;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  color: rgb(37, 99, 235);
+  transition: all 0.5s ease;
+  width: 30vw;
+  transition: all 0.5s ease-in-out;
+}
+
+.saveButton:hover {
+  color: rgb(105, 145, 233);
+}
+
+@media (max-width: 768px) {
+  .addProductContainer {
+    padding: 2.5rem 1rem 5rem 1rem;
+  }
+  .addProductFormContainer {
+    padding: 1rem;
+  }
+  .createButton {
+    width: 100%;
+  }
+  .saveButton {
+    width: 100%;
+  }
+  .addProductFormParentContainer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .addProductFormContainer {
+    width: 100%;
+  }
+  .productThumbnailCard {
+    padding: 1rem;
+  }
+  .productMediaCard {
+    padding: 1rem;
+  }
+  .imagePreviewCard {
+    padding: 1rem;
+  }
+  .imagePreview {
+    width: 80px;
+    height: 80px;
+  }
+  .imagePreviewCard .DeleteThumbnailBtn {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    background-color: red;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .imagePreviewCard {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* gap: 10px; */
+  }
+  .imagePreview {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+  .fileUpload {
+    width: 100%;
+    height: 100%;
+    border: 2px dashed #007bff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    cursor: pointer;
+    padding: 1rem;
+  }
+  .fileUpload p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  .fileInput {
+    position: absolute;
+    z-index: 1000;
+    opacity: 0;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+    height: 100%;
+    font-size: 24px;
+    width: 100%;
+  }
+  .imagePreviewContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .imagePreview {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .clearImage {
+    position: absolute;
+    z-index: 20;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  .uploadForm {
+    margin: 1rem;
+  }
+  .fileUploadContainer {
+    margin: 1rem 0;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+  }
+  .iconContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .imagePreviewCard {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .imagePreview {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    position: relative;
+  }
+  .imagePreview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .imagePreview button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+  }
+  .imagePreview button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .addProductFormContainer {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  .textField {
+    position: relative;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    margin: 1rem 0;
+  }
+  .textField input {
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 1rem;
+    transition: all 0.5s ease;
+  }
+  .textField label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #7e7e7e;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.5s ease;
+  }
+  .textField span::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: black;
+    transition: all 0.5s ease;
+  }
+  .textField input:focus ~ span::before,
+  .textField input:valid ~ span::before {
+    width: 100%;
+    border-bottom: 1px solid rgb(30, 64, 175);
+  }
+  .textField input:focus ~ label,
+  .textField input:valid ~ label {
+    top: -5px;
+    left: 0;
+    /* font-weight: 500; */
+    color: black;
+    font-size: 1rem;
+  }
+  .dropdown select {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1rem;
+    transition: all 0.5s ease;
+    background-color: transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  .textField select:focus {
+    border-color: #3064ff;
+  }
+  .textarea {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .textarea textarea {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  .textarea textarea::placeholder {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #7e7e7e;
+  }
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .saveButtonContainer {
+    display: flex;
+    justify-content: center;
+  }
+  .createButton {
+    font-size: 1.4rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    margin-inline: auto;
+    text-align: center;
+    margin-inline: 0.5rem;
+    height: 3rem;
+    outline: none;
+    border-radius: 0.8rem;
+    font-weight: 520;
+    cursor: pointer;
+    border: none;
+    background-color: rgba(30, 64, 175);
+    color: white;
+    transition: all 0.5s ease;
+    width: 30vw;
+    background-color: rgb(37, 99, 235);
+  }
+
+  .createButton:hover {
+    color: rgb(37, 99, 235);
+    background-color: white;
+    border: 1px solid rgb(37, 99, 235);
+  }
+  .saveButton {
+    border: 1px solid rgb(37, 99, 235);
+    font-size: 1.4rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    margin-inline: auto;
+    text-align: center;
+    margin-inline: 0.5rem;
+    height: 3rem;
+    outline: none;
+    border-radius: 0.8rem;
+    font-weight: 520;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    color: rgb(37, 99, 235);
+    transition: all 0.5s ease;
+    width: 30vw;
+    transition: all 0.5s ease-in-out;
+  }
+  .saveButton:hover {
+    color: rgb(105, 145, 233);
+  }
+  .addProductFormContainer {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  .textField {
+    position: relative;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    margin: 1rem 0;
+  }
+  .textField input {
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 1rem;
+    transition: all 0.5s ease;
+  }
+  .textField label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #7e7e7e;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.5s ease;
+  }
+  .textField span::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: black;
+    transition: all 0.5s ease;
+  }
+  .textField input:focus ~ span::before,
+  .textField input:valid ~ span::before {
+    width: 100%;
+    border-bottom: 1px solid rgb(30, 64, 175);
+  }
+  .textField input:focus ~ label,
+  .textField input:valid ~ label {
+    top: -5px;
+    left: 0;
+    /* font-weight: 500; */
+    color: black;
+    font-size: 1rem;
+  }
+  .dropdown select {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1rem;
+    transition: all 0.5s ease;
+    background-color: transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  .textField select:focus {
+    border-color: #3064ff;
+  }
+  .textarea {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .textarea textarea {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  .textarea textarea::placeholder {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #7e7e7e;
+  }
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .saveButtonContainer {
+    display: flex;
+    justify-content: center;
+  }
+  .createButton {
+    font-size: var(--font-small);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    margin-inline: auto;
+    text-align: center;
+    margin-inline: 0.5rem;
+    height: 3rem;
+    outline: none;
+    border-radius: 0.8rem;
+    font-weight: 520;
+    cursor: pointer;
+    border: none;
+    background-color: rgba(30, 64, 175);
+    color: white;
+    transition: all 0.5s ease;
+    width: 30vw;
+    background-color: rgb(37, 99, 235);
+  }
+  .saveButton {
+    font-size: var(--font-small);
+  }
+  .fileInput {
+    font-size: var(--font-small);
+  }
+  .DeleteThumbnailBtn {
+    font-size: var(--font-small);
+  }
+  .DeleteFilesBtn{
+    font-size: var(--font-small);
+
+  }
+}

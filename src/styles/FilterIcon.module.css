@@ -1,0 +1,19 @@
+.filterIcon {
+  display: none;
+  /* height: 2rem;
+    width: 2rem; */
+}
+@media (max-width: 768px) {
+  .filterIcon {
+    display: block;
+    z-index: 11;
+    position: fixed;
+    bottom: 9%;
+    left: 5%;
+    padding: 0.5rem;
+    box-sizing: initial;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35);
+  }
+}

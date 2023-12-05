@@ -1,0 +1,38 @@
+.productCarousel {
+  position: relative;
+  overflow: hidden;
+  padding: 26px;
+}
+
+.productContainer {
+  /* padding: 0 10px; */
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.preBtn,
+.nextBtn {
+  z-index: 100;
+  top: calc(50% - 30px);
+
+  position: absolute;
+  border: none;
+  height: 60px;
+  width: 60px;
+  /* height: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.preBtn {
+  left: 2%;
+}
+
+.nextBtn {
+  right: 2%;
+}

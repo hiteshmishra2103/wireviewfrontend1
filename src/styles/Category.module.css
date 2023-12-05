@@ -1,0 +1,254 @@
+.foundProducts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #495057;
+  margin: 
+}
+
+.noProductFound {
+  text-align: center;
+  padding: 50px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.crossIcon {
+  display: none;
+}
+
+.noProductFound h2 {
+  font-size: 2em;
+  color: #6c757d;
+}
+
+.noProductFound p {
+  font-size: 1.2em;
+  color: #495057;
+}
+.categoryFilterContainer {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.categoryFilterContainer h3 {
+  margin-bottom: 1rem;
+  color: #343a40;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.filterLink {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.5rem;
+  background-color: #fff;
+  border: 1px solid #caced1;
+  border-radius: 0.25rem;
+  color: #343a40;
+  cursor: pointer;
+}
+
+.filterLink:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.categoriesContainer {
+  margin: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.categoryProductGrid {
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.categoryProductCard {
+  margin: auto;
+}
+
+.categoryFilterContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.colorFilter {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* align-items: flex-start; */
+}
+
+.goldColor,
+.blackColor,
+.bluecolor,
+.greenColor,
+.greyColor,
+.pinkColor,
+.silverColor,
+.whiteColor,
+.yellowcolor,
+.allColor {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.goldColor {
+  background-color: #d4af37;
+}
+
+.blackColor {
+  background-color: #000000;
+}
+
+.bluecolor {
+  background-color: #0000ff;
+}
+
+.greenColor {
+  background-color: #008000;
+}
+
+.greyColor {
+  background-color: #808080;
+}
+
+.pinkColor {
+  background-color: #ffc0cb;
+}
+
+.silverColor {
+  background-color: #c0c0c0;
+}
+
+.whiteColor {
+  background-color: #ffffff;
+}
+
+.yellowcolor {
+  background-color: #ffff00;
+}
+
+.colorFilter div {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.colorFilter ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.mobileCategoriesContainer {
+  display: none;
+}
+
+.filterIcon {
+  display: none;
+  /* height: 2rem;
+    width: 2rem; */
+}
+
+.show {
+  display: block !important;
+}
+@media (max-width: 768px) {
+  .crossIcon {
+    display: block;
+  }
+  .filterColorContainer {
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+  }
+
+  .mobileCategoriesContainer {
+    display: block;
+  }
+  .mobileFoundProducts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #495057;
+padding: 1rem;
+  }
+
+  .categoriesContainer {
+    display: none;
+  }
+
+  .mobileCategoriesContainer .categoryProductContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .mobileCategoriesContainer .categoryProductGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    text-align: center;
+    grid-gap: 1rem;
+  }
+
+  .mobileCategoriesContainer .categoryProductCard {
+    margin: auto;
+  }
+
+  .categoryProductCard {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .filterIcon {
+    display: block;
+    z-index: 11;
+    position: fixed;
+    bottom: 9%;
+    left: 5%;
+    padding: 0.5rem;
+    box-sizing: initial;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35);
+  }
+}

@@ -1,0 +1,120 @@
+.header__product__card__container {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  border-radius: 0.6rem;
+  /* box-shadow: 5px 5px 20px black; */
+  max-width: 350px;
+  /* width: 1fr; */
+  max-height: 300px;
+  cursor: pointer;
+}
+
+.header__product__card__container img {
+  object-fit: cover;
+  transition: 0.5s all ease-in-out;
+}
+
+.header__product__card__container:hover img {
+  transform: scale(1.1);
+}
+
+.intro {
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+
+  padding-left: 20px;
+  padding-bottom: 20px;
+
+  background-color: rgb(27, 27, 27, 0.25);
+  color: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* align-items: center; */
+}
+
+.collectionsHeader {
+  /* margin: 0.6rem; */
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.quantity {
+  font-size: var(--small-font-size);
+  color: rgba(255, 255, 255, 0.6);
+  /* margin: 0.6rem; */
+  font-weight: bold;
+}
+.mask {
+  margin-left: 0.6rem;
+  margin-top: 0.6rem;
+}
+
+.Collections__Card__Container {
+  box-sizing: border-box;
+  
+  padding: 50px;
+}
+
+.Collections__Card__Title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 50px;
+}
+
+.title {
+  font-size: 2.5rem;
+}
+
+.line {
+  height: 0.3rem;
+  width: 80%;
+  border: none;
+  background-color: rgb(227, 227, 227);
+}
+
+.Collections__card__group {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/* /////////////////////Collection grid card///////////////////////// */
+
+.collectionsGridContainer {
+  display: grid;
+  margin-block: 50px;
+}
+.collectionsGridHeading {
+  background-color: rgb(250, 250, 250);
+  padding: 50px;
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+.collectionsGrid {
+  margin-left: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  row-gap: 2rem;
+  column-gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .line {
+    display: none;
+  }
+  .Collections__Card__Container {
+    text-align: center;
+  }
+  .Collections__card__group {
+    grid-template-columns: 1fr;
+  }
+}

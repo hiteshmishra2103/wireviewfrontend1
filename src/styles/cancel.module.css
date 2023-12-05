@@ -1,0 +1,28 @@
+/* Cancel.module.css */
+
+.cancelContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+.cancelMessage {
+  font-size: 2em;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  background-color: #ff0000; /* Red color */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .cancelMessage {
+    font-size: 1.5em;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,270 @@
+.signup {
+  /* margin-top: 2rem; */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(30, 64, 175, 1),
+    rgba(30, 64, 175, 0.7)
+  );
+  transition: opacity 0.5s ease-in;
+}
+
+.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.login {
+  /* margin-top: 2rem; */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(30, 64, 175, 1),
+    rgba(30, 64, 175, 0.7)
+  );
+  transition: opacity 0.5s ease-in;
+}
+
+.loginOpen {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 2%;
+  font-size: 2.5rem;
+  border-radius: 10px;
+  width: fit-content;
+  right: 5%;
+  transform: translate(-100%, 0%);
+  bottom: 90%;
+  cursor: pointer;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.closeBtn:hover {
+  transform: scale(1.1);
+}
+
+.center {
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  /* bottom: ; */
+  left: 50%;
+  color: black;
+  width: 400px;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  border-radius: 0.6rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.center h6 {
+  text-align: center;
+  font-size: var(--font-large);
+  padding: 0px 0 20px 0;
+  margin-top: 1.5rem;
+  /* border-bottom: 1px solid silver; */
+}
+
+.center .formContainer {
+  padding: 0px 40px;
+}
+
+.textField {
+  position: relative;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  margin: 1rem 0;
+}
+.textField input {
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 40px;
+  font-size: 1rem;
+  transition: all 0.5s ease;
+}
+
+.textField label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #7e7e7e;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.optional {
+  font-size: 0.7rem;
+}
+
+.textField span::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: black;
+  transition: all 0.5s ease;
+}
+
+.textField input:focus ~ span::before,
+.textField input:valid ~ span::before {
+  width: 100%;
+  border-bottom: 1px solid rgb(30, 64, 175);
+}
+
+.textField input:focus ~ label,
+.textField input:valid ~ label {
+  top: -5px;
+  left: 0;
+  /* font-weight: 500; */
+  color: black;
+  font-size: 1rem;
+}
+
+.signupBtnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  font-size: 1.4rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  margin-inline: auto;
+  margin-inline: 0.5rem;
+  height: 3rem;
+  outline: none;
+  border-radius: 0.8rem;
+  font-weight: 520;
+  cursor: pointer;
+  border: none;
+  background-color: rgba(30, 64, 175);
+  color: white;
+  width: 50%;
+  transition: all 0.5s ease;
+}
+
+.btn:hover {
+  color: rgba(30, 64, 175);
+  background-color: white;
+  border: 1px solid rgba(30, 64, 175);
+}
+
+.signinLink {
+  color: rgba(30, 64, 175);
+  position: relative;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.signinLink::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.8px;
+  bottom: 0;
+  left: 0;
+  background-color: #000; /* change this to the color you want for the underline */
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  transition: transform 0.5s ease-out;
+}
+
+.signinLink:hover::after {
+  transform: scaleX(0);
+}
+.signinLinkContainer {
+  margin-block: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.error {
+  color: red;
+  font-size: 1rem;
+  /* margin-top: 0.5rem; */
+  margin-bottom: 1rem;
+  /* display: none; */
+  opacity: 1;
+  text-align: center;
+  font-weight: 500;
+  transform: scale(1);
+  transition: all 0.5s ease-in-out;
+}
+
+.accountCreated {
+  color: green;
+  font-size: 1rem;
+  /* margin-top: 0.5rem; */
+  margin-bottom: 1rem;
+
+  opacity: 1;
+  text-align: center;
+  font-weight: 500;
+  transform: scale(1);
+  transition: all 0.5s ease-in-out;
+}
+
+.fullName {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.requiredFields {
+  color: red;
+  font-size: 1rem;
+  /* margin-top: 0.5rem; */
+  margin-bottom: 1rem;
+  /* display: none; */
+  opacity: 1;
+  text-align: center;
+  font-weight: 500;
+  transform: scale(1);
+  transition: all 0.5s ease-in-out;
+}
+
+.hide {
+  display: none;
+  opacity: 0;
+}
+
+.null {
+  border: 1px solid red;
+}
+
+@media (max-width: 768px) {
+  .center {
+    width: 90%;
+  }
+  
+}

@@ -1,0 +1,393 @@
+.crossIcon {
+  display: none;
+}
+
+.headerContainer {
+  height: 8rem;
+}
+.upperHeaderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 50px;
+  padding-left: 32px;
+  position: relative;
+}
+.hamburger {
+  display: none;
+}
+.searchIconMobile {
+  display: none;
+}
+
+.headerIconsContainer {
+  display: flex;
+  align-items: center;
+  width: 25%;
+  justify-content: space-between;
+}
+
+.cartContainer {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+  position: relative;
+}
+
+.quantity {
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0.2rem;
+  font-size: 0.8rem;
+}
+
+/* Navigation styles */
+.navContainer {
+  padding-top: 0.5rem;
+  display: none;
+}
+
+.dropdownLink {
+  font-weight: 400;
+}
+
+.navLink,
+.dropdownLink {
+  position: relative;
+  display: inline-block;
+}
+
+.navLink::after,
+.dropdownLink::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.8px;
+  bottom: 0;
+  left: 0;
+  background-color: #000; /* change this to the color you want for the underline */
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+}
+
+.navLink:hover::after,
+.dropdownLink.navLink:hover::after {
+  transform: scaleX(1);
+}
+
+.dropdownGroup {
+  display: grid;
+  gap: 1rem;
+}
+
+.navList {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 50px;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-small);
+  overflow-y: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%;
+  align-items: center;
+}
+.dropdownButton {
+  display: flex;
+  align-items: center;
+}
+
+.stgroup {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fontsmall);
+  font-weight: 400;
+  align-items: center;
+}
+.stgroup li {
+  display: flex;
+  align-items: center;
+}
+
+.dropdownItem > .dropdownContainer {
+  z-index: 100;
+  background-color: white;
+  max-width: 1120px;
+  cursor: pointer;
+  padding: 3.2rem;
+  border-radius: 0.6rem;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  transition: top 0.4s, opacity 0.3s;
+}
+
+.dropdownItem:hover > .dropdownContainer {
+  opacity: 1;
+  pointer-events: all;
+}
+.first {
+  width: 80%;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.dropdownItem {
+  cursor: pointer;
+}
+
+.dropdownItem .dropdownArrow {
+  transition: transform 0.2s;
+}
+
+.dropdownItem:hover .dropdownArrow {
+  transform: rotate(180deg);
+}
+
+/* ============-------------search bar css-------------------======================== */
+.search {
+  display: flex;
+  align-items: center;
+  /* border: 10px solid red; */
+  border-radius: 6px;
+  background-color: rgb(250, 250, 250);
+  padding: 35px;
+  height: 70px;
+}
+.searchBar {
+  width: 40%;
+}
+.search input {
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: null;
+}
+
+.searchBar .search input:focus {
+  outline: none !important ;
+}
+.compare {
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+/* ============-------------buttons css-------------------======================== */
+
+.loginBtn {
+  width: 100% !important;
+  min-width: fit-content !important;
+}
+
+.btn {
+  font-weight: 400;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 0.8rem;
+  box-sizing: border-box;
+  margin-inline: auto;
+  margin-inline: 0.5rem;
+  height: 3rem;
+  outline: none;
+  border-radius: 0.8rem;
+  font-weight: 520;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  background-color: rgba(30, 64, 175);
+  color: white;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+/* Add media query for screens smaller than 768px */
+
+/* min:360, 768 */
+/* max:360px */
+
+@media (max-width: 768px) {
+  .upperHeaderContainer {
+    display: flex;
+  }
+  .pcHeaderContainer {
+    display: none;
+  }
+  .headerContainer {
+    display: block;
+  }
+  .dropdownArrow {
+    display: none;
+  }
+
+  .dropdownTitle {
+    font-size: var(--font-large);
+  }
+
+  .dropdownContainer {
+    display: none;
+  }
+  .searchIconMobile {
+    display: block;
+    cursor: pointer;
+    margin-left: 0.5rem;
+  }
+  .searchIconMobile {
+    width: 10%;
+    height: 10%;
+    color: rgb(62, 62, 62);
+  }
+
+  .headerContainer {
+    height: 6rem;
+  }
+
+  .upperHeaderContainer {
+    width: 100vw;
+
+    /* padding-inline: 1rem; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 4rem;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger > div {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: rgb(0, 0, 0);
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .cartContainer {
+    z-index: 11;
+    position: fixed;
+    bottom: 9%;
+    right: 5%;
+    padding: 0.5rem;
+    box-sizing: initial;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35);
+  }
+
+  .logo {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .headerIconsContainer {
+    /* flex: 0.5; */
+    max-width: 50%;
+  }
+
+  .navList {
+    padding-inline: 20px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 1rem;
+    text-transform: capitalize;
+  }
+  .signupBtn {
+    display: none;
+    pointer-events: none;
+  }
+
+  .navContainer {
+    display: block;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    width: 80%;
+    height: 90vh;
+    background-color: rgb(255, 255, 255);
+    z-index: 40;
+    padding-block: 20%;
+    transition: all 0.5s ease;
+  }
+  .navList {
+    flex-direction: column;
+    padding-inline: 0;
+    align-content: space-around;
+    justify-content: space-around;
+    height: 100%;
+  }
+  .navLink {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 1rem;
+    color: rgb(62, 62, 62);
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 100vw;
+    padding-inline: 10%;
+  }
+  .dropdownGroup {
+    width: 100%;
+  }
+  .crossIcon {
+    position: relative;
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .crossIcon::before,
+  .crossIcon::after {
+    content: "";
+    position: absolute;
+    top: 0;
+
+    left: 100%;
+    width: 100%;
+    height: 2px;
+    background: black;
+  }
+
+  .crossIcon::before {
+    transform: rotate(45deg);
+  }
+
+  .crossIcon::after {
+    transform: rotate(-45deg);
+  }
+  .pcHeaderContainer {
+    display: none;
+  }
+  .pcNavContainer {
+    display: none;
+  }
+}
+
+/* Add media query for screens smaller than 480px */
+
+.btn:hover {
+  color: rgba(30, 64, 175);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgba(30, 64, 175);
+}
+
+/* ===================================Pc header styles===================================== */
+
+/* Navigation styles */
+.pcNavContainer {
+  padding-top: 0.5rem;
+}

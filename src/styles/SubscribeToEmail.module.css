@@ -1,0 +1,135 @@
+.SubscribeToEmailBanner {
+  /* margin: 50px; */
+  margin-top: 5rem;
+
+  position: relative;
+  height: 30vw;
+}
+.EnterEmailSection {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background-color: #ffffff;
+  width: calc(100% - 40px);
+  margin: auto;
+  height: 4.5rem;
+  width: fit-content;
+  border-radius: 0.6rem;
+  padding: 2rem 1.2rem;
+  z-index: 2;
+}
+
+.EnterEmailHeading {
+  font-size: 2.5rem;
+}
+
+.EnterEmailCaption {
+  font-size: 1.1rem;
+  color: #a0a0a0;
+}
+.EnterEmailContent {
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+.ImageMask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 64, 175, 0.4);
+  z-index: 1;
+  overflow: hidden;
+}
+
+.inputBox {
+  /* border: none; */
+  outline: none;
+  background: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1.2px solid rgb(37, 99, 235);
+  height: 3.2rem;
+  width: 20rem;
+}
+
+.SubscribeToEmailImage {
+  width: 100%;
+  height: 30vw;
+  /* object-fit: cover; */
+  position: relative;
+}
+/* //create an overlay for .SubscribeToEmailImage element with following color 
+//following code is not working for overlay on the image give me other solution */
+
+.SubscribeToEmailTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.btn {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.4rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(37, 99, 235);
+  background: rgb(37, 99, 235);
+  color: white;
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  background: white;
+  color: rgb(37, 99, 235);
+  border: 1px solid rgb(37, 99, 235);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .EnterEmail input {
+    background-color: white;
+  }
+
+  .EnterEmailContent {
+    width: 100%;
+    padding-left: 1rem;
+    text-align: left;
+    gap: 0.5rem;
+  }
+  .EnterEmailCaption {
+    color: white;
+  }
+
+  .EnterEmailHeading {
+    font-size: var(--font-large);
+    text-align: left;
+  }
+  .SubscribeToEmailBanner {
+    height: 55vh;
+  }
+  .SubscribeToEmailImage {
+    height: 55vh;
+  }
+
+  .EnterEmailSection {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+  }
+}

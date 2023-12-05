@@ -1,0 +1,42 @@
+.topComputersParentContainer {
+}
+.topComputersContentContainer {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 2rem;
+}
+
+/* .topComputersContentContainer div */
+.topComputersContentContainer h1 {
+  font-weight: 400;
+}
+
+.topComputersContent {
+  display: flex;
+  justify-content: space-between;
+  /* gap: 2rem; */
+}
+
+.productCard {
+  width: 300px;
+  height: 400px;
+  /* padding: 20px;
+  margin: 10px; */
+}
+
+@media (max-width: 768px) {
+  .topComputersContentContainer h1{
+    text-align: center;
+  }
+  .topComputersContent {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  .productCard {
+    width: 100%;
+    height: 100%;
+  }
+}
