@@ -1,7 +1,4 @@
-import { useEffect, useRef } from 'react';
-import { useRouter } from 'next/router';
-import { Loading } from '@/components/Loading';
-import { useState } from 'react';
+
 import Link from 'next/link';
 import styles from '../styles/Success.module.css'
 
