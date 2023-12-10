@@ -62,11 +62,11 @@ const SearchBar = () => {
             {isFocused && searchInput.length >= 3 && searchResults.length > 0 && (
                 <ul>
                     {searchResults.map((product, index) => (
-                        <Link href={`https://wireview-frontend-p335kthr4-hiteshmishra2103s-projects.vercel.app//product/${product._id}`}>
+                        <Link href={`https://wireviewfrontend1.vercel.app/product/${product._id}`}>
                             <li key={index} onClick={() => {
                                 setSearchInput('');
                                 setIsFocused(false);
-                                router.push(`https://wireview-frontend-p335kthr4-hiteshmishra2103s-projects.vercel.app//product/${product._id}`);
+                                router.push(`https://wireviewfrontend1.vercel.app/product/${product._id}`);
                             }}>
                                 {/* Display product details here */}
                                 <Image src={product.thumbnail}
