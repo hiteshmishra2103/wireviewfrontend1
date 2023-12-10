@@ -21,6 +21,7 @@
 
 .imageContainer {
   background-color: rgb(250, 250, 250);
+  cursor: pointer;
 }
 .Img {
   width: 100%;
