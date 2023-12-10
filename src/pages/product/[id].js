@@ -143,6 +143,7 @@ const ProductDetails = () => {
               <p>Login to add this product to cart!</p>
             )}
           </div>
+          {user.user?
           <button
             className={styles.buyBtn}
             onClick={() => {
@@ -150,7 +151,7 @@ const ProductDetails = () => {
             }}
           >
             Quick Buy
-          </button>
+          </button>: <p>Login to buy!</p>}
         </div>
       </div>
       {/* <div className={styles.productDescription}>

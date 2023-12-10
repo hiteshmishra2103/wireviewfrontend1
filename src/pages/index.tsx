@@ -12,7 +12,6 @@ import Gallery from '@/components/Gallery'
 import ProductsPage from '@/components/Productspage'
 import TopComputers from '@/components/TopComputers'
 import Texticons from '@/components/Texticons'
-import { RecoilRoot } from 'recoil'
 
 const inter = Inter({ subsets: ['latin'] })
 

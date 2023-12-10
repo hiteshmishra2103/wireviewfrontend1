@@ -23,7 +23,9 @@ const ProductCard = ({ imgUrl, name, price, id }) => {
             }
             <div className={styles.productCardContainer}>
 
-                <div className={styles.imageContainer}>
+                <div className={styles.imageContainer} onClick={() => {
+                    router.push(`/product/${id}`)
+                }}>
                     <Image src={imgUrl} className={styles.Img} width={100} height={100} />
                 </div>
 
