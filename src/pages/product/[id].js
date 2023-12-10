@@ -143,15 +143,16 @@ const ProductDetails = () => {
               <p>Login to add this product to cart!</p>
             )}
           </div>
-          {user.user?
-          <button
-            className={styles.buyBtn}
-            onClick={() => {
-              makePayment();
-            }}
-          >
-            Quick Buy
-          </button>: <p>Login to buy!</p>}
+          {user.user ? (
+            <button
+              className={styles.buyBtn}
+              onClick={() => {
+                makePayment();
+              }}
+            >
+              Quick Buy
+            </button>
+          ) : null}
         </div>
       </div>
       {/* <div className={styles.productDescription}>
