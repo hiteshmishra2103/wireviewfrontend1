@@ -116,9 +116,9 @@
   transition: all 0.5s ease;
 }
 
-.optional {
+/* .optional {
   font-size: 0.7rem;
-}
+} */
 
 .textField span::before {
   content: "";

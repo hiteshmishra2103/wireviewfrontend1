@@ -58,8 +58,7 @@ const Signup = () => {
                                 }
                                 value={lastName} />
                             <span></span>
-                            <label className={`${formStyles.optional} ${formStyles.usernameLabel}`}>Last name(optional)</label>
-
+                            <label className={`${formStyles.usernameLabel}`}>Last name(optional)</label>
                         </div>
                         <br />
                     </div>
