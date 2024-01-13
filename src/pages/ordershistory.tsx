@@ -66,10 +66,6 @@ const OrdersHistory = () => {
                 return (
                     <div className={styles.dashboardParentContainer}>
                         <div className={styles.dashboardSidebar}>
-                            {user?.user.isAdmin && <div onClick={() => {
-                                router.push(`/dashboard}/${user?.user.username}`)
-                            }}>Manage Orders</div>}
-
                             <div onClick={() => {
                                 router.push('/')
                             }}>Home</div>
@@ -133,8 +129,8 @@ const OrdersHistory = () => {
         } else {
             return (
                 <div className={styles.container}>
-                    <h1 className={styles.title}>Not authorised! Login to see your ordersHistory.</h1>
-                </div>
+                <h1 className={styles.title}>Not authorised! Login to see your ordersHistory.</h1>
+            </div>
             )
         }
     }

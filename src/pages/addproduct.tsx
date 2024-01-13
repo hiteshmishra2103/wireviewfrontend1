@@ -194,6 +194,7 @@ const AddProduct = () => {
 
     } else {
 
+        
         return (
             <div className={styles.addProductContainer}>
                 <h2>NEW PRODUCT</h2>
