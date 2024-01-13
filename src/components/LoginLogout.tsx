@@ -31,6 +31,7 @@ const LoginLogout = () => {
                             user: '',
                             isLoading: true,
                         });
+                        
                         router.push('/');
                     }}>Logout</button>
                 ) : (

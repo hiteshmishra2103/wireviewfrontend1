@@ -123,8 +123,8 @@ const Login = () => {
                                         const fill = document.querySelector(`.${formStyles.requiredFields}`) as HTMLElement;
                                         fill?.classList.add(`${formStyles.hide}`);
                                         if (adminLoginUrl) {
-                                            setAdminLoginUrl(false);
                                             router.push(`/dashboard/${username}`);
+                                            setAdminLoginUrl(false);
                                         }
                                         else {
                                             router.push(`/ordershistory`);

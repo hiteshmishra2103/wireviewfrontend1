@@ -17,8 +17,8 @@ const Signup = () => {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [notFilled, setNotFilled] = useState(false);
-    
-    
+
+
 
     const router = useRouter();
     return (

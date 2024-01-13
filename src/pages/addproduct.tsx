@@ -3,6 +3,8 @@ import styles from '../styles/Addproduct.module.css';
 import { userState } from '@/store/atoms/user';
 import { useRecoilValue } from 'recoil';
 import Custom404 from './404';
+
+//add the user.isadmin to the userState so that only admin can access this page
 const AddProduct = () => {
     const user = useRecoilValue(userState)
     const [Media, setMedia] = useState([]);

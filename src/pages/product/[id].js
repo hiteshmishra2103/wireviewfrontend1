@@ -19,6 +19,7 @@ const ProductDetails = () => {
   const setCartQuantity = useSetRecoilState(cartQuantityState);
   const [addToCart, setAddToCart] = useState(false);
   const user = useRecoilValue(userState);
+  
 
   const inputQuantity = useRef();
 
