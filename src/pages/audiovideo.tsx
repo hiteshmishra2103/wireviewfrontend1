@@ -24,7 +24,7 @@ const watch = ({ products }) => {
           <div className={styles.categoryFilterContainer}>
             <h3>Category</h3>
             <select className={styles.filterLink} onChange={(event) => {
-              router.push(`https://wireview-frontend-p335kthr4-hiteshmishra2103s-projects.vercel.app//${event.target.value}`);
+              router.push(`https://wireviewfrontend1.vercel.app//${event.target.value}`);
             }}>
               <option value="">Select a Category</option>
               <option value="/watch">Watch</option>
@@ -138,7 +138,7 @@ const watch = ({ products }) => {
               <div className={styles.categoryFilterContainer}>
                 <h3>Category</h3>
                 <select className={styles.filterLink} onChange={(event) => {
-                  router.push(`https://wireview-frontend-p335kthr4-hiteshmishra2103s-projects.vercel.app//${event.target.value}`);
+                  router.push(`https://wireviewfrontend1.vercel.app//${event.target.value}`);
                 }}>
                   <option value="">Select a Category</option>
                   <option value="/watch">Watch</option>

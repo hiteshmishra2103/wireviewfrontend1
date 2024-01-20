@@ -44,7 +44,7 @@ const Footer = () => {
                             Company
                         </h2>
                         <ul>
-                            <li><Link className={styles.link} href={'/'}>Our Story</Link></li>
+                            <li><Link className={styles.link} href={'/ourteam'}>Privacy Policy</Link></li>
                             <li><Link className={styles.link} href={'/'}>Career Opportunities</Link></li>
                             <li><Link className={styles.link} href={'/'}>Newsroom</Link></li>
                             <li><Link className={styles.link} href={'/contact'}>Contact Wireview</Link></li>

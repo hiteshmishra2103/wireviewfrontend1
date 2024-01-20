@@ -3,7 +3,7 @@ module.exports = {
   corePlugins: {
     preflight: false,
   },
-  content: ["./src/pages/contact.tsx"],
+  content: ["./src/pages/contact.tsx","./src/pages/privacypolicy.tsx"],
 
   theme: {
     extend: {},
