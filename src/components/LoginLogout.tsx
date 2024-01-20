@@ -40,19 +40,8 @@ const LoginLogout = () => {
                     {user.user.isAdmin ? <>
 
                         <button className={`${styles.btn} ${styles.loginBtn} pcLogout`} onClick={() => {
-                            localStorage.setItem("token", null);
-                            setUser({
-                                user: '',
-                                isLoading: true,
-                            });
+                            try {
 
-
-                            router.push('/');
-
-                        }}>Logout</button>
-
-                        <svg className="mobileLogout cursor-pointer w-6 h-6 text-blue-700 hover:fill-transparent hover:text-blue-600 transition duration-300 ease-in-out" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16"
-                            onClick={() => {
                                 localStorage.setItem("token", null);
                                 setUser({
                                     user: '',
@@ -61,6 +50,27 @@ const LoginLogout = () => {
 
 
                                 router.push('/');
+                            } catch (err) {
+                                console.log(err);
+                            }
+
+                        }}>Logout</button>
+
+                        <svg className="mobileLogout cursor-pointer w-6 h-6 text-blue-700 hover:fill-transparent hover:text-blue-600 transition duration-300 ease-in-out" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16"
+                            onClick={() => {
+                                try {
+
+                                    localStorage.setItem("token", null);
+                                    setUser({
+                                        user: '',
+                                        isLoading: true,
+                                    });
+
+
+                                    router.push('/');
+                                } catch (err) {
+                                    console.log(err);
+                                }
 
                             }}>
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h11m0 0-4-4m4 4-4 4m-5 3H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h3" />
@@ -93,14 +103,19 @@ const LoginLogout = () => {
                         </button>
 
                     </> : <button className={`${styles.btn} ${styles.loginBtn}`} onClick={() => {
-                        localStorage.setItem("token", null);
-                        setUser({
-                            user: '',
-                            isLoading: true,
-                        });
+                        try {
+
+                            localStorage.setItem("token", null);
+                            setUser({
+                                user: '',
+                                isLoading: true,
+                            });
 
 
-                        router.push('/');
+                            router.push('/');
+                        } catch (err) {
+                            console.log(err);
+                        }
                     }}>Logout</button>
 
                     }
