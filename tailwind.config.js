@@ -5,7 +5,7 @@ module.exports = {
   },
   content: [
     "./src/pages/contact.tsx",
-    "./src/pages/privacypolicy.tsx",
+    "./src/pages/about.tsx",
     "./src/components/LoginLogout.tsx",
   ],
 

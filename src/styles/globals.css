@@ -16,6 +16,10 @@
   word-wrap: break-word;
 }
 
+.mobileLogout{
+  display: none;
+}
+
 html,
 body {
   font-family: "Inter", sans-serif;
@@ -62,6 +66,12 @@ li {
 }
 
 @media (max-width: 768px) {
+  .pcLogout{
+    display: none;
+  }
+  .mobileLogout{
+    display: block;
+  }
   .notification {
     top: 5%;
     right: 50%;

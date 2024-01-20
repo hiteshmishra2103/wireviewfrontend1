@@ -39,7 +39,7 @@ const LoginLogout = () => {
                 <>
                     {user.user.isAdmin ? <>
 
-                        <button className={`${styles.btn} ${styles.loginBtn}`} onClick={() => {
+                        <button className={`${styles.btn} ${styles.loginBtn} pcLogout`} onClick={() => {
                             localStorage.setItem("token", null);
                             setUser({
                                 user: '',
@@ -48,7 +48,23 @@ const LoginLogout = () => {
 
 
                             router.push('/');
+
                         }}>Logout</button>
+
+                        <svg className="mobileLogout cursor-pointer w-6 h-6 text-blue-700 hover:fill-transparent hover:text-blue-600 transition duration-300 ease-in-out" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16"
+                            onClick={() => {
+                                localStorage.setItem("token", null);
+                                setUser({
+                                    user: '',
+                                    isLoading: true,
+                                });
+
+
+                                router.push('/');
+
+                            }}>
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h11m0 0-4-4m4 4-4 4m-5 3H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h3" />
+                        </svg>
                         <button
                             onClick={() => {
                                 try {
@@ -65,10 +81,9 @@ const LoginLogout = () => {
 
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                width="40"
-                                height="41"
+
                                 viewBox="0 0 24 24"
-                                className="fill-current  text-blue-700 hover:stroke-current hover:fill-transparent hover:text-blue-600 transition duration-300 ease-in-out"
+                                className="h-10 w-10 fill-current  text-blue-700 hover:stroke-current hover:fill-transparent hover:text-blue-600 transition duration-300 ease-in-out"
                             >
                                 <path d="M4 13h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1zm-1 7a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v4zm10 0a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v7zm1-10h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1z"></path>
                             </svg>

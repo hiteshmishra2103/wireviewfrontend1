@@ -44,15 +44,14 @@ const Footer = () => {
                             Company
                         </h2>
                         <ul>
-                            <li><Link className={styles.link} href={'/ourteam'}>Privacy Policy</Link></li>
-                            <li><Link className={styles.link} href={'/'}>Career Opportunities</Link></li>
+                            <li><Link className={styles.link} href={'/about'}>About</Link></li>
+                            <li><Link className={styles.link} href={'/'}>Privacy Policy</Link></li>
                             <li><Link className={styles.link} href={'/'}>Newsroom</Link></li>
-                            <li><Link className={styles.link} href={'/contact'}>Contact Wireview</Link></li>
+                            <li><Link className={styles.link} href={'/contact'}>Contact</Link></li>
                         </ul>
-
                     </div>
                     <div className={styles.footerTopBlock}>
-                        <h2 className={styles.footerHeading}>   
+                        <h2 className={styles.footerHeading}>
                             Find it Fast
                         </h2>
                         <ul>
@@ -67,14 +66,7 @@ const Footer = () => {
                 <hr />
                 <div className={styles.footerContentmiddle}>
                     <div className={styles.footerMiddleContentContainer}>
-                        <div className={styles.footerColumnLinksContaier}>
-                            <ul className={styles.footerColumnLinks}>
-                                <li><a className={styles.link} href="">Privacy Policy</a></li>
-                                <li><a className={styles.link} href="">Terms Of Use</a></li>
-                                <li><a className={styles.link} href="">Sales and Refunds</a></li>
-                                <li><a className={styles.link} href="">Legal</a></li>
-                            </ul>
-                        </div>
+
                         <div className={styles.footerSocialLinksContainer}>
                             <ul className={styles.footerSocialLinks}>
                                 <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false" role="presentation" className="icon icon-twitter" fill="none">

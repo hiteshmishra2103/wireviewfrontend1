@@ -212,6 +212,10 @@
 /* max:360px */
 
 @media (max-width: 768px) {
+  .loginBtn {
+    width: 100% !important;
+    min-width: fit-content !important;
+  }
   .upperHeaderContainer {
     display: flex;
   }
