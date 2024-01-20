@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRecoilValue } from "recoil";
 import { userState } from "@/store/atoms/user";
 import Custom404 from "./404";
-import styles from "../styles/addProduct.module.css";
+import styles from '../styles/Addproduct.module.css'
 import {  mounted } from "@/store/atoms/mounted";
 import { CircularProgress } from "@mui/material";
 
