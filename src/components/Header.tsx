@@ -84,7 +84,7 @@ const Header = () => {
                                             </a>
                                         </li>
                                         <li>
-                                            <Link href={`/watch`} className={`${styles.navLink} ${styles.dropdownLink}`}>Woodstock Watch</Link>
+                                            <Link href={`/watch`} className={`${styles.navLink} ${styles.dropdownLink}`}>Wireview Watch</Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -99,7 +99,7 @@ const Header = () => {
                                             >Cellphones & Accessories</a                                        >
                                         </li>
                                         <li>
-                                            <Link href={`/watch`} className={`${styles.navLink} ${styles.dropdownLink}`}>Woodstock Watch Premium</Link>
+                                            <Link href={`/watch`} className={`${styles.navLink} ${styles.dropdownLink}`}>Wireview Watch Premium</Link>
 
                                         </li>
                                     </ul>
@@ -160,10 +160,11 @@ const Header = () => {
                                 Cellphones</p>
                         </li>
                         <li className={styles.dropdownItem} onClick={async () => {
-                            await router.push('/cellphones');
+                            await router.push('/contact');
                             setIsVisible(false);
                         }}>
-                            <p className={`${styles.navLink} ${styles.dropdownButton}`}>Support</p>
+                            <p className={`${styles.navLink} ${styles.dropdownButton}`} onClick={async () =>
+                                await router.push('/contact')}>Contact</p>
                         </li>
                     </ul>
 
@@ -206,7 +207,7 @@ const Header = () => {
                                             </a>
                                         </li>
                                         <li>
-                                            <Link href={`/watch`} className={`${styles.navLink} ${styles.dropdownLink}`}>Woodstock Watch</Link>
+                                            <Link href={`/watch`} className={`${styles.navLink} ${styles.dropdownLink}`}>Wireview Watch</Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -221,7 +222,7 @@ const Header = () => {
                                             >Cellphones & Accessories</a                                        >
                                         </li>
                                         <li>
-                                            <Link href={`/watch`} className={`${styles.navLink} ${styles.dropdownLink}`}>Woodstock Watch Premium</Link>
+                                            <Link href={`/watch`} className={`${styles.navLink} ${styles.dropdownLink}`}>Wireview Watch Premium</Link>
 
                                         </li>
                                     </ul>
@@ -282,10 +283,10 @@ const Header = () => {
                                 Cellphones</p>
                         </li>
                         <li className={styles.dropdownItem} onClick={async () => {
-                            await router.push('/cellphones');
+                            await router.push('/contact');
                             setIsVisible(false);
                         }}>
-                            <p className={`${styles.navLink} ${styles.dropdownButton}`}>Support</p>
+                            <p className={`${styles.navLink} ${styles.dropdownButton}`}>Contact</p>
                         </li>
                     </ul>
 

@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '../styles/Footer.module.css'
 import Logo from '../../public/header/logo2-removebg-preview.png'
 import Image from "next/image"
+import Link from 'next/link'
 
 const Footer = () => {
     return (
@@ -30,7 +31,7 @@ const Footer = () => {
                                     <li>
                                         <svg className={styles.footerBlockPhoneIcon} aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 5C3 3.89543 3.89543 3 5 3H8.27924C8.70967 3 9.09181 3.27543 9.22792 3.68377L10.7257 8.17721C10.8831 8.64932 10.6694 9.16531 10.2243 9.38787L7.96701 10.5165C9.06925 12.9612 11.0388 14.9308 13.4835 16.033L14.6121 13.7757C14.8347 13.3306 15.3507 13.1169 15.8228 13.2743L20.3162 14.7721C20.7246 14.9082 21 15.2903 21 15.7208V19C21 20.1046 20.1046 21 19 21H18C9.71573 21 3 14.2843 3 6V5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                                         <div className={styles.footerLeftBlockInformation}>
-                                            Or call  +91 11 2370 1234
+                                            Or call  +91 00 0000 0000
                                         </div>
                                     </li>
                                 </ul>
@@ -43,40 +44,30 @@ const Footer = () => {
                             Company
                         </h2>
                         <ul>
-                            <li><a className={styles.link} href="">Our Story</a></li>
-                            <li><a className={styles.link} href="">Career Opportunities</a></li>
-                            <li><a className={styles.link} href="">Newsroom</a></li>
-                            <li><a className={styles.link} href="">Contact Wireview</a></li>
+                            <li><Link className={styles.link} href={'/'}>Our Story</Link></li>
+                            <li><Link className={styles.link} href={'/'}>Career Opportunities</Link></li>
+                            <li><Link className={styles.link} href={'/'}>Newsroom</Link></li>
+                            <li><Link className={styles.link} href={'/contact'}>Contact Wireview</Link></li>
                         </ul>
 
                     </div>
                     <div className={styles.footerTopBlock}>
-                        <h2 className={styles.footerHeading}>
+                        <h2 className={styles.footerHeading}>   
                             Find it Fast
                         </h2>
                         <ul>
-                            <li><a className={styles.link} href="">Computer & Tablet </a></li>
-                            <li><a className={styles.link} href="">Cellphones & Accessories</a></li>
-                            <li><a className={styles.link} href=""> Audio & Video</a></li>
-                            <li><a className={styles.link} href="">Cameras, Camcorders</a></li>
+                            <li><Link className={styles.link} href={'/computer'}>Computer & Tablet </Link></li>
+                            <li><Link className={styles.link} href={'/cellphones'}>Cellphones & Accessories</Link></li>
+                            <li><Link className={styles.link} href={'/audiovideo'}> Audio & Video</Link></li>
+                            <li><Link className={styles.link} href={'/accessories'}>Accessories</Link></li>
                         </ul>
                     </div>
-                    <div className={styles.footerTopBlock}>
-                        <h2 className={styles.footerHeading}>
-                            Make Money With Us
-                        </h2>
-                        <ul>
-                            <li><a className={styles.link} href="">Sell on Woodstock</a></li>
-                            <li><a className={styles.link} href="">Become an Affilate</a></li>
-                            <li><a className={styles.link} href="">Advertise Your Products</a></li>
-                            <li><a className={styles.link} href="">Become an Woodstock Vendor</a></li>
-                        </ul>
-                    </div>
+
                 </div>
                 <hr />
                 <div className={styles.footerContentmiddle}>
                     <div className={styles.footerMiddleContentContainer}>
-                         <div className={styles.footerColumnLinksContaier}>
+                        <div className={styles.footerColumnLinksContaier}>
                             <ul className={styles.footerColumnLinks}>
                                 <li><a className={styles.link} href="">Privacy Policy</a></li>
                                 <li><a className={styles.link} href="">Terms Of Use</a></li>

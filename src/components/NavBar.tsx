@@ -36,7 +36,7 @@ const NavBar = () => {
                       <a href="" className={styles.dropdown__link}>Accessories</a>
                     </li>
                     <li>
-                      <a href="" className={styles.dropdown__link}>Woodstock Watch</a>
+                      <a href="" className={styles.dropdown__link}>Wireview Watch</a>
                     </li>
                   </ul>
                 </div>
