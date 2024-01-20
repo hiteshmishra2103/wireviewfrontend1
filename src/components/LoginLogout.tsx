@@ -21,30 +21,83 @@ const LoginLogout = () => {
     if (!isMounted) {
         return <CircularProgress />
     }
+
     else {
-        return (
-            <>
-                {user.user ? (
-                    <button className={`${styles.btn} ${styles.loginBtn}`} onClick={() => {
+
+        if (!user.user) {
+            return (
+                <>
+                    <button className={`${styles.btn} ${styles.loginBtn}`} onClick={() => openSigninModal()}>Login</button>
+                    <Login />
+                    <button className={`${styles.btn} ${formStyles.openSignupModal} ${styles.signupBtn}`} onClick={() => openSignupModal()}>Sign up</button>
+                    <Signup />
+                </>
+            )
+        } else {
+
+            return (
+                <>
+                    {user.user.isAdmin ? <>
+
+                        <button className={`${styles.btn} ${styles.loginBtn}`} onClick={() => {
+                            localStorage.setItem("token", null);
+                            setUser({
+                                user: '',
+                                isLoading: true,
+                            });
+
+
+                            router.push('/');
+                        }}>Logout</button>
+                        <button
+                            onClick={() => {
+                                try {
+                                    router.push(`/dashboard/${user.user.username}`);
+
+                                } catch (err) {
+                                    console.log(err);
+                                }
+                            }}
+                            type="button"
+                            class="border-none  cursor-pointer relative inline-flex items-center p-3 text-sm font-medium text-center text-white bg-transparent rounded-full"
+                        >
+
+
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="40"
+                                height="41"
+                                viewBox="0 0 24 24"
+                                className="fill-current  text-blue-700 hover:stroke-current hover:fill-transparent hover:text-blue-600 transition duration-300 ease-in-out"
+                            >
+                                <path d="M4 13h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1zm-1 7a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v4zm10 0a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v7zm1-10h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1z"></path>
+                            </svg>
+
+
+
+                        </button>
+
+                    </> : <button className={`${styles.btn} ${styles.loginBtn}`} onClick={() => {
                         localStorage.setItem("token", null);
                         setUser({
                             user: '',
                             isLoading: true,
                         });
-                        
+
+
                         router.push('/');
                     }}>Logout</button>
-                ) : (
-                    <>
-                        <button className={`${styles.btn} ${styles.loginBtn}`} onClick={() => openSigninModal()}>Login</button>
-                        <Login />
-                        <button className={`${styles.btn} ${formStyles.openSignupModal} ${styles.signupBtn}`} onClick={() => openSignupModal()}>Sign up</button>
-                        <Signup />
-                    </>
-                )}
-            </>
-        );
+
+                    }
+                </>
+            );
+
+        }
+
     }
 };
 
 export default LoginLogout
+
+
+

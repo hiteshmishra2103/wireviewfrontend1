@@ -8,9 +8,13 @@ import updateOrderStatus from '@/lib/utils/updateOrderStatus';
 import { useSetRecoilState } from 'recoil';
 import { useRecoilValue } from 'recoil';
 import { userState } from '@/store/atoms/user';
+import { mounted } from '@/store/atoms/mounted';
+import { useRouter } from 'next/router';
 
 const Dashboard = () => {
+    const router = useRouter();
     const user = useRecoilValue(userState);
+    const isMounted = useRecoilValue(mounted);
 
     const [orders, setOrders] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -44,20 +48,52 @@ const Dashboard = () => {
     }, [updating]);
 
 
-    if (!user?.user.isAdmin) {
+
+    if (loading) {
         return (
-            <div className={styles.noAccess}>
-                <h2>Oops!</h2>
-                <p>This page does not exist!</p>
+            <div
+                style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    width: "100%",
+                    height: "100vh",
+                }}
+            >
+                <div style={{ display: "flex", justifyContent: "center" }}>
+                    <CircularProgress />
+                </div>
             </div>
-        )
+        );
+    } else {
+        if (!user?.user.isAdmin) {
+            return (
+                <div className={styles.noAccess}>
+                    <h2>Oops!</h2>
+                    <p>This page does not exist!</p>
+                </div>
+            )
+        }
     }
+
+
 
     if (fulfilledOrders) {
         //show only fulfilled orders
         return (
             <div className={styles.dashboardParentContainer}>
                 <div className={styles.dashboardSidebar}>
+                    <div
+                        className={allOrders ? styles.active : ''}
+                        onClick={() => {
+                            setPendingOrders(false);
+                            setFulfilledOrders(false);
+                            setAllOrders(true)
+                        }}
+                    >
+                        All Orders
+                    </div>
                     <div
                         className={pendingOrders ? styles.active : ''}
                         onClick={() => {
@@ -78,16 +114,12 @@ const Dashboard = () => {
                     >
                         Fulfilled Orders
                     </div>
-                    <div
-                        className={allOrders ? styles.active : ''}
-                        onClick={() => {
-                            setPendingOrders(false);
-                            setFulfilledOrders(false);
-                            setAllOrders(true)
-                        }}
-                    >
-                        All Orders
+                    <div onClick={async () => {
+                        await router.push('/addproduct')
+                    }}>
+                        Add New Product
                     </div>
+
                 </div>
 
                 <div className={styles.dashboardContent}>
@@ -119,7 +151,7 @@ const Dashboard = () => {
                                                 <h1> Order #{order._id}</h1>
                                                 {order.products.map(product => (
                                                     <div className={styles.productDetails}>
-                                                        <Image src={product.product.thumbnail} width={100} height={100} />
+                                                        <Image alt='product-thumbnail' src={product.product.thumbnail} width={100} height={100} />
                                                         <p> {product.product.name}</p>
                                                         <p> Quantity: {product.quantity}</p>
                                                         <p> Price: ${product.product.price}</p>
@@ -141,6 +173,16 @@ const Dashboard = () => {
             <div className={styles.dashboardParentContainer}>
                 <div className={styles.dashboardSidebar}>
                     <div
+                        className={allOrders ? styles.active : ''}
+                        onClick={() => {
+                            setPendingOrders(false);
+                            setFulfilledOrders(false);
+                            setAllOrders(true)
+                        }}
+                    >
+                        All Orders
+                    </div>
+                    <div
                         className={pendingOrders ? styles.active : ''}
                         onClick={() => {
                             setPendingOrders(true);
@@ -160,16 +202,12 @@ const Dashboard = () => {
                     >
                         Fulfilled Orders
                     </div>
-                    <div
-                        className={allOrders ? styles.active : ''}
-                        onClick={() => {
-                            setPendingOrders(false);
-                            setFulfilledOrders(false);
-                            setAllOrders(true)
-                        }}
-                    >
-                        All Orders
+                    <div onClick={async () => {
+                        await router.push('/addproduct')
+                    }}>
+                        Add New Product
                     </div>
+
                 </div>
 
                 <div className={styles.dashboardContent}>
@@ -201,7 +239,7 @@ const Dashboard = () => {
                                         <h1> Order #{order._id}</h1>
                                         {order.products.map(product => (
                                             <div className={styles.productDetails}>
-                                                <Image src={product.product.thumbnail} width={100} height={100} />
+                                                <Image alt='product-thumbnail' src={product.product.thumbnail} width={100} height={100} />
                                                 <p> {product.product.name}</p>
                                                 <p> Quantity: {product.quantity}</p>
                                                 <p> Price: ${product.product.price}</p>
@@ -241,6 +279,16 @@ const Dashboard = () => {
             <div className={styles.dashboardParentContainer}>
                 <div className={styles.dashboardSidebar}>
                     <div
+                        className={allOrders ? styles.active : ''}
+                        onClick={() => {
+                            setPendingOrders(false);
+                            setFulfilledOrders(false);
+                            setAllOrders(true)
+                        }}
+                    >
+                        All Orders
+                    </div>
+                    <div
                         className={pendingOrders ? styles.active : ''}
                         onClick={() => {
                             setPendingOrders(true);
@@ -260,16 +308,13 @@ const Dashboard = () => {
                     >
                         Fulfilled Orders
                     </div>
-                    <div
-                        className={allOrders ? styles.active : ''}
-                        onClick={() => {
-                            setPendingOrders(false);
-                            setFulfilledOrders(false);
-                            setAllOrders(true)
-                        }}
-                    >
-                        All Orders
+
+                    <div onClick={async () => {
+                        await router.push('/addproduct')
+                    }}>
+                        Add New Product
                     </div>
+
                 </div>
 
                 <div className={styles.dashboardContent}>
@@ -299,7 +344,7 @@ const Dashboard = () => {
                                         <h1> Order #{order._id}</h1>
                                         {order.products.map(product => (
                                             <div className={styles.productDetails}>
-                                                <Image src={product.product.thumbnail} width={100} height={100} />
+                                                <Image alt='product-thumbnail' src={product.product.thumbnail} width={100} height={100} />
                                                 <p> {product.product.name}</p>
                                                 <p> Quantity: {product.quantity}</p>
                                                 <p> Price: ${product.product.price}</p>
@@ -336,12 +381,4 @@ const Dashboard = () => {
 
     // ... Rest of the code
 }
-
-
-
-
-
-
-
-
 export default Dashboard

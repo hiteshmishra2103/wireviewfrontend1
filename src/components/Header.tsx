@@ -66,7 +66,7 @@ const Header = () => {
                                     <span className={styles.dropdownTitle}>Shop</span>
                                     <ul className={styles.dropdownList}>
                                         <li>
-                                            <Link href='/' className={`${styles.navLink} ${styles.dropdownLink}`}>Shop The Latest</Link>
+                                            <Link href={'/store'} className={`${styles.navLink} ${styles.dropdownLink}`}>Shop The Latest</Link>
                                         </li>
                                         <li>
                                             <Link href={`/computer`} className={`${styles.navLink} ${styles.dropdownLink}`} >
@@ -189,7 +189,7 @@ const Header = () => {
                                     <span className={styles.dropdownTitle}>Shop</span>
                                     <ul className={styles.dropdownList}>
                                         <li>
-                                            <Link href='/' className={`${styles.navLink} ${styles.dropdownLink}`}>Shop The Latest</Link>
+                                            <Link href={'/store'} className={`${styles.navLink} ${styles.dropdownLink}`}>Shop The Latest</Link>
                                         </li>
                                         <li>
                                             <Link href={`/computer`} className={`${styles.navLink} ${styles.dropdownLink}`} >

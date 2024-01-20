@@ -25,8 +25,6 @@ const watch = ({ products }) => {
 
 
             <ProductsPage name={"Watch"} />
-
-
             <div className={styles.categoriesContainer}>
 
                 <div className={styles.filterContainer}>
