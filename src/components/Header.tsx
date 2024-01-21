@@ -92,11 +92,11 @@ const Header = () => {
                                     <span className={styles.dropdownTitle}>Featured</span>
                                     <ul className={styles.dropdownList}>
                                         <li>
-                                            <a href="" className={`${styles.navLink} ${styles.dropdownLink}`}>Audio & Video</a>
+                                            <Link href={'/audiovideo'} className={`${styles.navLink} ${styles.dropdownLink}`}>Audio & Video</Link>
                                         </li>
                                         <li>
-                                            <a href="" className={`${styles.navLink} ${styles.dropdownLink}`}
-                                            >Cellphones & Accessories</a                                        >
+                                            <Link href={'/cellphones'} className={`${styles.navLink} ${styles.dropdownLink}`}
+                                            >Cellphones & Accessories</Link>
                                         </li>
                                         <li>
                                             <Link href={`/watch`} className={`${styles.navLink} ${styles.dropdownLink}`}>Wireview Watch Premium</Link>
@@ -104,7 +104,7 @@ const Header = () => {
                                         </li>
                                     </ul>
                                 </div>
-                                <div className={styles.dropdownGroup}>
+                                {/* <div className={styles.dropdownGroup}>
                                     <span className={styles.dropdownTitle}>Bestseller</span>
                                     <ul className={styles.dropdownList}>
                                         <li>
@@ -120,7 +120,7 @@ const Header = () => {
                                             <a href="/watch" className={`${styles.navLink} ${styles.dropdownLink}`}>Watch </a>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> */}
                             </div>
                         </li>
                         <li className={styles.dropdownItem}>
@@ -202,9 +202,9 @@ const Header = () => {
                                             </Link>
                                         </li>
                                         <li>
-                                            <a href={`/accessories`} className={`${styles.navLink} ${styles.dropdownLink}`}>
+                                            <Link href={`/accessories`} className={`${styles.navLink} ${styles.dropdownLink}`}>
                                                 Accessories
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
                                             <Link href={`/watch`} className={`${styles.navLink} ${styles.dropdownLink}`}>Wireview Watch</Link>
@@ -215,11 +215,12 @@ const Header = () => {
                                     <span className={styles.dropdownTitle}>Featured</span>
                                     <ul className={styles.dropdownList}>
                                         <li>
-                                            <a href="" className={`${styles.navLink} ${styles.dropdownLink}`}>Audio & Video</a>
+                                            <Link href={'/audiovideo'} className={`${styles.navLink} ${styles.dropdownLink}`}>Audio & Video</Link>
+
                                         </li>
                                         <li>
-                                            <a href="" className={`${styles.navLink} ${styles.dropdownLink}`}
-                                            >Cellphones & Accessories</a                                        >
+                                            <Link href={'/cellphones'} className={`${styles.navLink} ${styles.dropdownLink}`}
+                                            >Cellphones & Accessories</Link>
                                         </li>
                                         <li>
                                             <Link href={`/watch`} className={`${styles.navLink} ${styles.dropdownLink}`}>Wireview Watch Premium</Link>
@@ -227,23 +228,7 @@ const Header = () => {
                                         </li>
                                     </ul>
                                 </div>
-                                <div className={styles.dropdownGroup}>
-                                    <span className={styles.dropdownTitle}>Bestseller</span>
-                                    <ul className={styles.dropdownList}>
-                                        <li>
-                                            <a href="/computer" className={`${styles.navLink} ${styles.dropdownLink}`}>Laptops</a>
-                                        </li>
-                                        <li>
-                                            <a href="/computer" className={`${styles.navLink} ${styles.dropdownLink}`}> Gaming Laptops</a>
-                                        </li>
-                                        <li>
-                                            <a href="/computer" className={`${styles.navLink} ${styles.dropdownLink}`}>Gaming Desktops </a>
-                                        </li>
-                                        <li>
-                                            <a href="/watch" className={`${styles.navLink} ${styles.dropdownLink}`}>Watch </a>
-                                        </li>
-                                    </ul>
-                                </div>
+
                             </div>
                         </li>
                         <li className={styles.dropdownItem}>

@@ -16,7 +16,6 @@ const about = () => {
                             <a href='https://linkedin.com/in/hiteshmishra21' class="inline-block">
                                 <img src='https://res.cloudinary.com/drzwpn4ub/image/upload/c_scale,h_100/v1705759000/linkedin4_1_ktdrmt.png' class="transition-transform duration-300 ease-in-out hover:scale-105 hover:brightness-110" />
                             </a>
-
                             <div>
                                 <a href='https://linkedin.com/in/hiteshmishra21' class="inline-block">
                                     <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900 hover:text-blue-600 transition duration-400 hover:underline">
@@ -61,14 +60,17 @@ const about = () => {
                                 <strong>Stripe Payments:</strong> Trustworthy and secure payment processing.
                             </li>
                             <li>
-                                <strong>Admin Dashboard:</strong> Manage orders with ease using a clear, convenient dashboard.
+                                <strong>Admin Dashboard:</strong>Admins can manage orders with ease using a clear, convenient dashboard.
+                            </li>
+                            <li>
+                                <strong>User Dashboard:</strong>Users can view their orders and order status with ease using a clear, convenient dashboard.
                             </li>
                         </ul>
                     </div>
 
                     <div className="mb-6">
                         <p className="text-md text-gray-600">
-                            Fast and reliable deployments with Vercel for the frontend and Cyclic.sh for the server. Styled using Tailwind CSS and inspired by Shopify's Woodstock theme, my platform is visually appealing and responsive.
+                            I deployed this website on Vercel for the frontend and Cyclic.sh for the server. Styled using Tailwind CSS and inspired by Shopify's Woodstock theme.
                         </p>
                     </div>
                 </div>

@@ -45,8 +45,8 @@ const Footer = () => {
                         </h2>
                         <ul>
                             <li><Link className={styles.link} href={'/about'}>About</Link></li>
-                            <li><Link className={styles.link} href={'/'}>Privacy Policy</Link></li>
-                            <li><Link className={styles.link} href={'/'}>Newsroom</Link></li>
+                            <li><Link className={styles.link} href={'/privacy'}>Privacy Policy</Link></li>
+                            <li><Link className={styles.link} href={'/termsandconditions'}>Terms & Conditions</Link></li>
                             <li><Link className={styles.link} href={'/contact'}>Contact</Link></li>
                         </ul>
                     </div>
@@ -69,10 +69,13 @@ const Footer = () => {
 
                         <div className={styles.footerSocialLinksContainer}>
                             <ul className={styles.footerSocialLinks}>
-                                <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20" aria-hidden="true" focusable="false" role="presentation" className="icon icon-twitter" fill="none">
-                                    <path d="M15.2213 3H17.9803L11.9224 9.78967L19 19H13.4459L9.0973 13.403L4.11896 19H1.35988L7.77774 11.738L1 3H6.6921L10.6208 8.11292L15.2213 3ZM14.2556 17.4059H15.7851L5.88837 4.53506H4.24492L14.2556 17.4059Z" fill="currentColor"></path>
-                                </svg></a></li>
-                                <li><a href=""><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" className="icon icon-facebook" role="presentation">
+                                <li>
+                                    <a href=""><svg class={`${styles.linkedinIcon} w-10 h-10 text-blue-700 `} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 15 15">
+                                        <path fill-rule="evenodd" d="M7.979 5v1.586a3.5 3.5 0 0 1 3.082-1.574C14.3 5.012 15 7.03 15 9.655V15h-3v-4.738c0-1.13-.229-2.584-1.995-2.584-1.713 0-2.005 1.23-2.005 2.5V15H5.009V5h2.97ZM3 2.487a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" clip-rule="evenodd" />
+                                        <path d="M3 5.012H0V15h3V5.012Z" />
+                                    </svg>
+                                    </a></li>
+                                {/* <li><a href=""><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" className="icon icon-facebook" role="presentation">
                                     <path d="M6.02103 15.3333L6.00001 8.66663H3.33334V5.99996H6.00001V4.33329C6.00001 1.85903 7.53222 0.666626 9.73944 0.666626C10.7967 0.666626 11.7054 0.745339 11.9702 0.780526V3.36628L10.4394 3.36697C9.23898 3.36697 9.00655 3.93739 9.00655 4.77443V5.99996H12.5L11.1667 8.66663H9.00655V15.3333H6.02103Z" fill="currentColor"></path>
                                 </svg></a></li>
                                 <li><a href=""><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" className="icon icon-pinterest">
@@ -88,14 +91,14 @@ const Footer = () => {
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" className="icon icon-youtube">
                                         <path d="M15.9963 5.6389C16.0323 4.1584 15.8047 2.68898 15.3349 1.36707C15.0161 0.824662 14.5737 0.45862 14.0848 0.33273C12.0625 0.0715852 10.0317 -0.0354495 8.00136 0.0120845C5.97838 -0.037607 3.95498 0.0659739 1.93973 0.322387C1.54131 0.425528 1.17259 0.691484 0.878584 1.0878C0.224452 1.9463 0.15177 3.41507 0.0790889 4.65628C-0.026363 6.88794 -0.026363 9.12715 0.0790889 11.3588C0.100116 12.0574 0.173207 12.7509 0.297133 13.4275C0.384769 13.9499 0.562073 14.4332 0.813171 14.8342C1.10918 15.2515 1.48648 15.5326 1.89612 15.641C3.46307 15.9162 5.04193 16.0303 6.62041 15.9823C9.16426 16.034 11.3956 15.9823 14.0339 15.6927C14.4536 15.591 14.8415 15.3095 15.1459 14.8859C15.3494 14.5962 15.5014 14.2416 15.5893 13.8516C15.8492 12.7165 15.9769 11.5286 15.9672 10.3348C15.9963 9.75558 15.9963 6.25951 15.9963 5.6389ZM6.35876 10.9554V4.55284L10.6615 7.76965C9.45499 8.72124 7.86327 9.79696 6.35876 10.9554Z" fill="currentColor"></path>
                                     </svg>
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
                     </div>
                 </div>
 
-            </footer>
-        </div>
+            </footer >
+        </div >
     )
 }
 

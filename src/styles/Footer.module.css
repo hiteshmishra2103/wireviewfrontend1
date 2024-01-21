@@ -76,6 +76,15 @@
   margin-block: 50px;
 }
 
+.linkedinIcon {
+  transition: color 0.3s ease;
+}
+
+.linkedinIcon:hover {
+  color: #00329f;
+}
+
+/* Media queries for responsiveness */
 @media (max-width: 768px) {
   .footerLogo {
     text-align: center;
