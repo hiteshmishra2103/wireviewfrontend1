@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductCard from '../../src/components/ProductCard'
+import ProductCard from './ProductCard.jsx'
 import styles from '../styles/TopProducts.module.css'
 
 

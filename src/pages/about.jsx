@@ -70,7 +70,7 @@ const about = () => {
 
                     <div className="mb-6">
                         <p className="text-md text-gray-600">
-                            I deployed this website on Vercel for the frontend and Cyclic.sh for the server. Styled using Tailwind CSS and inspired by Shopify's Woodstock theme.
+                            I deployed this website on Vercel for the frontend and Cyclic.sh for the server. Styled using Tailwind CSS and home page design is inspired by Shopify's Woodstock theme.
                         </p>
                     </div>
                 </div>

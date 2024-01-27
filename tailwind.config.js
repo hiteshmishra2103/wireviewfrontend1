@@ -4,11 +4,11 @@ module.exports = {
     preflight: false,
   },
   content: [
-    "./src/pages/contact.tsx",
-    "./src/pages/about.tsx",
-    "./src/pages/privacy.tsx",
-    "./src/pages/termsandconditions.tsx",
-    "./src/components/LoginLogout.tsx",
+    "./src/pages/contact.jsx",
+    "./src/pages/about.jsx",
+    "./src/pages/privacy.jsx",
+    "./src/pages/termsandconditions.jsx",
+    "./src/components/LoginLogout.jsx",
   ],
 
   theme: {

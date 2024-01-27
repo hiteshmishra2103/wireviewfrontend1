@@ -4,7 +4,7 @@ const updateOrderStatus = async (status, orderId, fetchOrders, setUpdating) => {
     setUpdating(true);
     try {
         const updateOrderStatus = async () => {
-            const res = await axios.put(`https://ill-lingerie-bass.cyclic.app//updateOrderStatus/${orderId}`, {
+            const res = await axios.put(`https://ill-lingerie-bass.cyclic.app/updateOrderStatus/${orderId}`, {
                 status: status
             }, {
                 headers: {

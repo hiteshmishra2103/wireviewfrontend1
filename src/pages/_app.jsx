@@ -1,18 +1,18 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import { RecoilRoot, constSelector, useRecoilValue } from 'recoil'
-import { userState } from '@/store/atoms/user'
-import cartQuantityState from '../store/atoms/cart'
+import "@/styles/globals.css";
 
-import axios from 'axios'
-import { useSetRecoilState } from 'recoil'
-import { useEffect } from 'react'
-import { usernameState } from '@/store/selectors/username'
-import { mounted } from '@/store/atoms/mounted'
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { RecoilRoot, useRecoilValue } from "recoil";
+import { userState } from "@/store/atoms/user";
+import cartQuantityState from "@/store/atoms/cart";
 
-export default function App({ Component, pageProps }: AppProps) {
+import axios from "axios";
+import { useSetRecoilState } from "recoil";
+import { useEffect } from "react";
+import { usernameState } from "@/store/selectors/username";
+
+import { mounted } from "@/store/atoms/mounted";
+export default function App({ Component, pageProps }) {
   return (
     <>
       <RecoilRoot>
@@ -23,22 +23,22 @@ export default function App({ Component, pageProps }: AppProps) {
         <Footer />
       </RecoilRoot>
     </>
-  )
+  );
 }
-
 
 function InitCart() {
   const setCartQuantityState = useSetRecoilState(cartQuantityState);
 
-
-
   const init = async () => {
     try {
-      const response = await axios.get(`https://ill-lingerie-bass.cyclic.app//cartQuantity`, {
-        headers: {
-          'Authorization': 'Bearer ' + localStorage.getItem('token'),
-        },
-      });
+      const response = await axios.get(
+        `https://ill-lingerie-bass.cyclic.app//cartQuantity`,
+        {
+          headers: {
+            Authorization: "Bearer " + localStorage.getItem("token"),
+          },
+        }
+      );
 
       if (response.data.cartQuantity) {
         console.log(response.data.cartQuantity.totalQuantity);
@@ -51,23 +51,25 @@ function InitCart() {
 
   init();
 
-
   return null;
 }
 
 function InitUser() {
   const setUser = useSetRecoilState(userState);
-  const username = useRecoilValue(usernameState)
+  const username = useRecoilValue(usernameState);
   const setMounted = useSetRecoilState(mounted);
 
   useEffect(() => {
     const init = async () => {
       try {
-        const response = await axios.get(`https://ill-lingerie-bass.cyclic.app//me`, {
-          headers: {
-            'Authorization': 'Bearer ' + localStorage.getItem('token'),
-          },
-        });
+        const response = await axios.get(
+          `https://ill-lingerie-bass.cyclic.app/me`,
+          {
+            headers: {
+              Authorization: "Bearer " + localStorage.getItem("token"),
+            },
+          }
+        );
 
         if (response.data.user) {
           setUser({
@@ -80,7 +82,7 @@ function InitUser() {
         console.error(e);
       } finally {
         setMounted({
-          isMounted: true
+          isMounted: true,
         });
       }
     };
@@ -88,7 +90,7 @@ function InitUser() {
     init();
   }, []);
   return null;
-};
+}
 
 export async function getStaticProps() {
   const res = await fetch(`https://ill-lingerie-bass.cyclic.app//products`);
