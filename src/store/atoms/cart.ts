@@ -1,7 +1,7 @@
 import { atom } from 'recoil';
 
 
-const cartQuantityState = atom({
+const cartQuantityState = atom<number>({
     key: 'cartQuantityState',
     default: 0,
 });

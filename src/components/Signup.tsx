@@ -98,7 +98,7 @@ const Signup = () => {
                             try {
                                 if (!username || !password || !email || !firstName) {
                                     setNotFilled(true);
-                                    const fill = document.querySelector(`.${formStyles.requiredFields}`);
+                                    const fill = document.querySelector(`.${formStyles.requiredFields}`) as HTMLElement;
                                     fill.classList.remove(`${formStyles.hide}`)
                                     return;
                                 }
@@ -115,13 +115,13 @@ const Signup = () => {
                                 localStorage.setItem("token", data.token);
                                 if (res.status == 200) {
                                     setAccountCreated(true);
-                                    const error = document.querySelector(`.${formStyles.error}`);
+                                    const error = document.querySelector(`.${formStyles.error}`) as HTMLElement;
                                     error?.classList.add(`${formStyles.hide}`);
-                                    const fill = document.querySelector(`.${formStyles.requiredFields}`);
+                                    const fill = document.querySelector(`.${formStyles.requiredFields}`) as HTMLElement;
                                     fill?.classList.add(`${formStyles.hide}`);
 
                                     setTimeout(() => {
-                                        const accountCreated = document.querySelector(`.${formStyles.accountCreated}`);
+                                        const accountCreated = document.querySelector(`.${formStyles.accountCreated}`) as HTMLElement;
                                         accountCreated.classList.add(`${formStyles.hide}`);
                                         setEmail("");
                                         setUsername("");

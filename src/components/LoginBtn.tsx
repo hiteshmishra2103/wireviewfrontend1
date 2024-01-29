@@ -11,7 +11,7 @@ const LoginBtn = () => {
             try {
                 if (!username || !password) {
                     setExistsError(true);
-                    const fill = document.querySelector(`.${formStyles.requiredFields}`);
+                    const fill = document.querySelector(`.${formStyles.requiredFields}`) as HTMLElement;
                     fill.classList.remove(`${formStyles.hide}`);
                 };
                 const res = await axios.post(`${loginUrl}`, {
@@ -26,7 +26,7 @@ const LoginBtn = () => {
                 localStorage.setItem("token", data.token);
                 if (res.status === 200) {
                     setLoggedIn(true);
-                    const fill = document.querySelector(`.${formStyles.requiredFields}`);
+                    const fill = document.querySelector(`.${formStyles.requiredFields}`) as HTMLElement;
                     fill.classList.add(`${formStyles.hide}`);
                     if (loginUrl === `https://ill-lingerie-bass.cyclic.app/login`) {
 
