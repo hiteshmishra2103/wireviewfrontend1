@@ -1,7 +1,7 @@
 
 # Wireview Frontend
 
-This is the frontend for my full stack E-commerce website hosted at https://wireviewfrontend1.vercel.app/
+This is the frontend for my full stack E-commerce website hosted at https://wireviewfrontend1.vercel.app/  
 The design inspiration for this project was drawn from the Shopify **[Woodstock](https://themes.shopify.com/themes/woodstock/styles/light)** theme.
 
 
@@ -33,9 +33,9 @@ Before you begin, ensure you have the following installed on your machine:
 
 1. Clone the repository to your local machine:
 
-   ```bash
-   git clone https://github.com/hiteshmishra2103/wireviewfrontend1.git 
-   ```
+```bash
+git clone https://github.com/hiteshmishra2103/wireviewfrontend1.git 
+```
 
 
 2. Navigate to the project directory
@@ -72,7 +72,7 @@ Replace these placeholders with your actual values within the `.env` file.
 
 1. Start the development server:
 
-   ```bash
-   npm run dev
-   ```
+```bash
+npm run dev
+```
 2. Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to view the project.
