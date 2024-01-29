@@ -1,40 +1,78 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Wireview Frontend
 
-First, run the development server:
+This is the frontend for my full stack E-commerce website hosted at https://wireviewfrontend1.vercel.app/
+The design inspiration for this project was drawn from the Shopify **[Woodstock](https://themes.shopify.com/themes/woodstock/styles/light)** theme.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+
+
+## Tech Stack:
+
+* **[Next.js](https://nextjs.org/)**
+* **[React](https://reactjs.org/)**
+* **[JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)**
+* **[Recoiljs](https://recoiljs.org/)**
+* **[Tailwind CSS](https://tailwindcss.com/)**
+* **[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)**
+* **[Cloudinary](https://cloudinary.com/)**
+* **[Visual Studio Code](https://code.visualstudio.com/download)**
+
+
+
+
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed on your machine:
+
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
+
+## Installation
+
+1. Clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/hiteshmishra2103/wireviewfrontend1.git 
+   ```
+
+
+2. Navigate to the project directory
+```bash 
+cd nextjs-page-router-app
 ```
 
-Open [https://wireviewfrontend1.vercel.app/](https://wireviewfrontend1.vercel.app/) with your browser to see the result.
+3. Install Dependencies
+```bash
+npm install
+```     
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+**Environment Variables:**
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [https://wireviewfrontend1.vercel.app//api/hello](https://wireviewfrontend1.vercel.app//api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+**1. Create a `.env` file:**
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Create a file titled `.env` at the root of your project directory.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+**2. Replace placeholders with your values:**
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Variable           | Description                         | Example                         |
+|--------------------|------------------------------------|--------------------------------|
+| `NEXT_PUBLIC_SERVER_URL` | URL of Wireview server        | `http://localhost:3000` |
+| `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME` | Your Cloudinary cloud name    | `your-cloud-name`             |
+| `NEXT_PUBLIC_PUBLISHABLE_KEY` | Stripe key          | `your-publishable-key`        |
+| `NEXT_PUBLIC_UPLOAD_PRESET` | Cloudinary upload preset      | `your-upload-preset`          |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Replace these placeholders with your actual values within the `.env` file.
 
-## Deploy on Vercel
+## Usage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+2. Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to view the project.
