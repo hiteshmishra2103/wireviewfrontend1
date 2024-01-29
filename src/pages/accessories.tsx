@@ -300,7 +300,7 @@ const watch = ({ products }) => {
 export default watch
 
 export async function getStaticProps() {
-    const res = await fetch(`https://ill-lingerie-bass.cyclic.app/category/accessories`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/category/accessories`);
     const data = await res.json();
     const products = data.products;
     return {

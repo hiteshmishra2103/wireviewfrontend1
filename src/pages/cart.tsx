@@ -50,7 +50,7 @@ const cart = () => {
             const body = { product: products };
 
             response = await fetch(
-                `https://ill-lingerie-bass.cyclic.app/create-checkout-session`,
+                `${process.env.NEXT_PUBLIC_SERVER_URL}/create-checkout-session`,
                 {
                     method: "POST",
                     headers: {
@@ -78,7 +78,7 @@ const cart = () => {
     const fetchCart = async () => {
         try {
 
-            const res = await fetch(`https://ill-lingerie-bass.cyclic.app/cart`, {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/cart`, {
                 method: 'GET',
                 headers: {
                     'Authorization': 'Bearer ' + localStorage.getItem('token'),
@@ -150,7 +150,7 @@ const cart = () => {
                                                 className={styles.removeFromCartButton}
                                                 onClick={async () => {
                                                     try {
-                                                        const response = await fetch(`https://ill-lingerie-bass.cyclic.app//deleteFromCart/${product.product._id}`, {
+                                                        const response = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}//deleteFromCart/${product.product._id}`, {
                                                             method: 'DELETE',
                                                             headers: {
                                                                 'Content-Type': 'application/json',

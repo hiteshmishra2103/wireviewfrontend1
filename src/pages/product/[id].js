@@ -25,7 +25,7 @@ const ProductDetails = () => {
 
   useEffect(() => {
     if (id) {
-      fetch(`https://ill-lingerie-bass.cyclic.app//products/${id}`)
+      fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}//products/${id}`)
         .then((res) => res.json())
         .then((product) => setProduct(product));
     }
@@ -65,7 +65,7 @@ const ProductDetails = () => {
     };
 
     const response = await fetch(
-      `https://ill-lingerie-bass.cyclic.app/create-checkout-session`,
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/create-checkout-session`,
       {
         method: "POST",
         headers: {

@@ -28,7 +28,7 @@ const LoginBtn = () => {
                     setLoggedIn(true);
                     const fill = document.querySelector(`.${formStyles.requiredFields}`) as HTMLElement;
                     fill.classList.add(`${formStyles.hide}`);
-                    if (loginUrl === `https://ill-lingerie-bass.cyclic.app/login`) {
+                    if (loginUrl === `${process.env.NEXT_PUBLIC_SERVER_URL}/login`) {
 
                         router.push(`${username}/orders`);
                     }

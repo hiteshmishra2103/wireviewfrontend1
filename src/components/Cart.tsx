@@ -20,7 +20,7 @@ const Cart = () => {
     useEffect(() => {
         const fetchCartQuantity = async () => {
             try {
-                const response = await axios.get(`https://ill-lingerie-bass.cyclic.app//cartQuantity`, {
+                const response = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URL}//cartQuantity`, {
                     headers: {
                         'Authorization': 'Bearer ' + localStorage.getItem('token'),
                     },
