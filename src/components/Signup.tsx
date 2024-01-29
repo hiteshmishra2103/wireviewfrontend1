@@ -103,7 +103,7 @@ const Signup = () => {
                                     return;
                                 }
 
-                                const res = await axios.post(`https://ill-lingerie-bass.cyclic.app//signup`, {
+                                const res = await axios.post(`${process.env.NEXT_PUBLIC_SERVER_URL}//signup`, {
                                     username: username,
                                     password: password
                                 }, {

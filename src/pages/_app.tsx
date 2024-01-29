@@ -34,7 +34,7 @@ function InitCart() {
 
   const init = async () => {
     try {
-      const response = await axios.get(`https://ill-lingerie-bass.cyclic.app//cartQuantity`, {
+      const response = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URL}//cartQuantity`, {
         headers: {
           'Authorization': 'Bearer ' + localStorage.getItem('token'),
         },
@@ -63,7 +63,7 @@ function InitUser() {
   useEffect(() => {
     const init = async () => {
       try {
-        const response = await axios.get(`https://ill-lingerie-bass.cyclic.app//me`, {
+        const response = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URL}//me`, {
           headers: {
             'Authorization': 'Bearer ' + localStorage.getItem('token'),
           },
@@ -91,7 +91,7 @@ function InitUser() {
 };
 
 export async function getStaticProps() {
-  const res = await fetch(`https://ill-lingerie-bass.cyclic.app//products`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}//products`);
   const products = await res.json();
   //return the products which are in the category of cellphones
   return {

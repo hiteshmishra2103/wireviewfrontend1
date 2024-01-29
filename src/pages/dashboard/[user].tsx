@@ -26,7 +26,7 @@ const Dashboard = () => {
     const [updating, setUpdating] = useState(false);
     const fetchOrders = async () => {
         try {
-            const res = await axios.get(`https://ill-lingerie-bass.cyclic.app/orders`, {
+            const res = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URL}/orders`, {
                 headers: {
                     'Authorization': 'Bearer ' + localStorage.getItem('token'),
                 },

@@ -1,6 +1,6 @@
 export default async function addToCartFn(id, price, setCartQuantity, setAddToCart, quantity) {
     try {
-        const response = await fetch(`https://ill-lingerie-bass.cyclic.app//addToCart`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}//addToCart`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

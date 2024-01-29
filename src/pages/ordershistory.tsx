@@ -20,7 +20,7 @@ const OrdersHistory = () => {
     useEffect(() => {
         const getOrdersHistory = async () => {
             try {
-                const response = await fetch(`https://ill-lingerie-bass.cyclic.app//orderHistory`, {
+                const response = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}//orderHistory`, {
                     method: "GET",
                     headers: {
                         'Content-Type': 'application/json',

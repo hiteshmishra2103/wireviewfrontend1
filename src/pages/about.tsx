@@ -14,7 +14,10 @@ const about = () => {
                         <div class="flex  items-center gap-x-6">
                             {/* <img src='https://res.cloudinary.com/drzwpn4ub/image/upload/c_scale,h_100/v1705754402/about.png' /> */}
                             <a href='https://linkedin.com/in/hiteshmishra21' class="inline-block">
-                                <img src='https://res.cloudinary.com/drzwpn4ub/image/upload/c_scale,h_100/v1705759000/linkedin4_1_ktdrmt.png' class="transition-transform duration-300 ease-in-out hover:scale-105 hover:brightness-110" />
+                            <img
+                  src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,h_100/v1705759000/linkedin4_1_ktdrmt.png`}
+                  class="transition-transform duration-300 ease-in-out hover:scale-105 hover:brightness-110"
+                />
                             </a>
                             <div>
                                 <a href='https://linkedin.com/in/hiteshmishra21' class="inline-block">

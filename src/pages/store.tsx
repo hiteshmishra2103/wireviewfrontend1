@@ -302,7 +302,7 @@ const store = ({ products }) => {
 export default store
 
 export async function getStaticProps() {
-    const res = await fetch(`https://ill-lingerie-bass.cyclic.app//products`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}//products`);
     const products = await res.json();
     //return the products which are in the category of cellphones
     return {
