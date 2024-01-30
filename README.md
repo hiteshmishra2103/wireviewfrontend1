@@ -5,7 +5,9 @@
 # Wireview Frontend
 
 This is the frontend for my full stack E-commerce website hosted at https://wireviewfrontend1.vercel.app/  
-The design inspiration for this project is taken from the Shopify **[Woodstock](https://themes.shopify.com/themes/woodstock/styles/light)** theme.
+The design inspiration for this project is taken from the Shopify <a href="https://themes.shopify.com/themes/woodstock/styles/light" target="_blank">Woodstock</a> theme.
+
+
 
 
 
