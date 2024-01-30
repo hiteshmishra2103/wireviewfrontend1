@@ -83,10 +83,33 @@ npm run dev
 |---|---|
 | ![Mobile ](https://github.com/hiteshmishra2103/wireviewfrontend1/assets/66027081/85ab8c97-d4a2-4df8-89a5-cdca559f6c9b)| ![Desktop](https://github.com/hiteshmishra2103/wireviewfrontend1/assets/66027081/20793a2f-602f-4688-b7b9-20f5c15a8bd4) |
 
+
 <h2>Login Page</h2>
 
 |Mobile View| Desktop View |
 |---|---|
 | ![Mobile ](https://github.com/hiteshmishra2103/wireviewfrontend1/assets/66027081/795f64e9-d279-448e-9077-a32bb00115a3)| ![Desktop](https://github.com/hiteshmishra2103/wireviewfrontend1/assets/66027081/f39a0c50-98aa-4689-bbe8-d8f291c103dd) |
+
+<h2>Admin Dashboard</h2>
+
+![admindashboard](https://github.com/hiteshmishra2103/wireviewfrontend1/assets/66027081/34a8be49-ec20-4750-8582-bcfcefb266b7)
+
+<h2>Product Details Page</h2>
+
+|Mobile View| Desktop View |
+|---|---|
+| ![Mobile ](https://github.com/hiteshmishra2103/wireviewfrontend1/assets/66027081/1644cdc0-453d-490e-9981-f5fda24dca44)| ![Desktop](https://github.com/hiteshmishra2103/wireviewfrontend1/assets/66027081/be17a5f1-cd54-44aa-aa22-725fa73b2660) |
+
+<h2>Orders History </h2>
+
+|Mobile View| Desktop View |
+|---|---|
+| ![Mobile ](https://github.com/hiteshmishra2103/wireviewfrontend1/assets/66027081/02ad31d3-a4c4-445d-8596-e113f72b60a6)| ![Desktop](https://github.com/hiteshmishra2103/wireviewfrontend1/assets/66027081/9adc571f-dd05-44bd-a351-51d14bc7dabd) |
+
+<h2>Search box</h2>
+
+|Mobile View| Desktop View |
+|---|---|
+| ![Mobile ](https://github.com/hiteshmishra2103/wireviewfrontend1/assets/66027081/6a04ba3f-b34d-4098-a1b1-253e6f6084d1)| ![Desktop](https://github.com/hiteshmishra2103/wireviewfrontend1/assets/66027081/5016d380-ecf8-47f7-be34-cb4c1ee23143) |
 
 
