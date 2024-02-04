@@ -1,5 +1,5 @@
 import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+// import type { AppProps } from 'next/app'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { RecoilRoot, constSelector, useRecoilValue } from 'recoil'
@@ -12,7 +12,7 @@ import { useEffect } from 'react'
 import { usernameState } from '@/store/selectors/username'
 import { mounted } from '@/store/atoms/mounted'
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }) {
   return (
     <>
       <RecoilRoot>
@@ -34,7 +34,7 @@ function InitCart() {
 
   const init = async () => {
     try {
-      const response = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URL}//cartQuantity`, {
+      const response = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URL}/cartQuantity`, {
         headers: {
           'Authorization': 'Bearer ' + localStorage.getItem('token'),
         },

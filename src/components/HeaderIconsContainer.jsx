@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import { userState } from '@/store/atoms/user';
 import { useSetRecoilState } from 'recoil';
 import LoginLogout from './LoginLogout';
-import Cart from '../components/Cart';
+import Cart from './Cart';
 
 
 const HeaderIconsContainer = () => {

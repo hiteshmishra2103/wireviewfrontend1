@@ -59,11 +59,11 @@ const Login = () => {
                                 try {
                                     if (!username || !password) {
                                         setExistsError(true);
-                                        const fill = document.querySelector(`.${formStyles.requiredFields}`) as HTMLElement;
+                                        const fill = document.querySelector(`.${formStyles.requiredFields}`);
                                         fill.classList.remove(`${formStyles.hide}`);
                                     };
                                     console.log(username);
-                                    const res = await axios.post(`${process.env.NEXT_PUBLIC_SERVER_URL}//admin/login`, {
+                                    const res = await axios.post(`https://ill-lingerie-bass.cyclic.app//admin/login`, {
                                         username, password
                                     }, {
                                         headers: {
@@ -74,7 +74,7 @@ const Login = () => {
                                     localStorage.setItem("token", data.token);
                                     if (res.status === 200) {
                                         setLoggedIn(true);
-                                        const fill = document.querySelector(`.${formStyles.requiredFields}`) as HTMLElement;
+                                        const fill = document.querySelector(`.${formStyles.requiredFields}`);
                                         fill?.classList.add(`${formStyles.hide}`);
                                         if (adminLoginUrl) {
                                             await router.push(`/dashboard/${username}`);
@@ -90,7 +90,7 @@ const Login = () => {
                                     console.error('Error:', error);
                                     if (error.response && error.response.status == 403) {
                                         setExistsError(true);
-                                        const fill = document.querySelector(`.${formStyles.requiredFields}`) as HTMLElement;
+                                        const fill = document.querySelector(`.${formStyles.requiredFields}`);
                                         fill?.classList.remove(`${formStyles.hide}`);
 
                                     } else {
@@ -104,11 +104,11 @@ const Login = () => {
                                     try {
                                         if (!username || !password) {
                                             setExistsError(true);
-                                            const fill = document.querySelector(`.${formStyles.requiredFields}`) as HTMLElement;
+                                            const fill = document.querySelector(`.${formStyles.requiredFields}`);
                                             fill.classList.remove(`${formStyles.hide}`);
                                         };
                                         console.log(username, password);
-                                        const res = await axios.post(`${process.env.NEXT_PUBLIC_SERVER_URL}//login`, {
+                                        const res = await axios.post(`https://ill-lingerie-bass.cyclic.app//login`, {
                                             username, password
                                         }, {
                                             headers: {
@@ -123,7 +123,7 @@ const Login = () => {
                                                 user: username,
                                                 isLoading: false
                                             })
-                                            const fill = document.querySelector(`.${formStyles.requiredFields}`) as HTMLElement;
+                                            const fill = document.querySelector(`.${formStyles.requiredFields}`);
                                             fill?.classList.add(`${formStyles.hide}`);
                                             if (adminLoginUrl) {
                                                 router.push(`/dashboard/${username}`);
@@ -140,7 +140,7 @@ const Login = () => {
                                         if (error.response && error.response.status == 403) {
                                             console.log(error.response.data);
                                             setExistsError(true);
-                                            const fill = document.querySelector(`.${formStyles.requiredFields}`) as HTMLElement;
+                                            const fill = document.querySelector(`.${formStyles.requiredFields}`);
                                             fill?.classList.remove(`${formStyles.hide}`);
 
                                         } else {
